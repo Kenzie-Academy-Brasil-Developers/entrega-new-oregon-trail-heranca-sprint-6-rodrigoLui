@@ -3,9 +3,7 @@ const Traveler  = require("./Traveler");
 class Hunter extends Traveler {
 
     constructor (name, food, isHealthy) {
-        super(name)
-        this.isHealthy = isHealthy
-        this.food = food
+        super(name, food, isHealthy)
     }
 
     hunt () {
@@ -30,14 +28,3 @@ class Hunter extends Traveler {
 }
 
 module.exports = Hunter;
-
-// const eu = new Traveler('Rodrigo', true, 0)
-
-// const euCacador = new Hunter('Rugal', 5, true)
-// console.log(euCacador)
-
-
-// euCacador.giveFood(eu, 5)
-
-// console.log(euCacador)
-// console.log(eu)

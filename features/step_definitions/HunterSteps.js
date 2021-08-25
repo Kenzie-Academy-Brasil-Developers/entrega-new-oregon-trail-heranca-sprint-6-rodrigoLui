@@ -43,8 +43,6 @@ Then('O Hunter doa {int} refeições para um Traveler', function (int) {
     cacador.giveFood()
 });
 
-
-
 Then('a quantidade refeições deve-se ser igual a {int}', function (int) {
     assert.strictEqual(cacador.food, int)
 });
@@ -52,7 +50,6 @@ Then('a quantidade refeições deve-se ser igual a {int}', function (int) {
 Then('a quantidade de refeições tem que ser igual a {int}', function (int) {
     assert.strictEqual(cacador.food, int)
 });
-
 
 Then('o Hunter ficará doente', function () {
     assert.strictEqual(cacador.isHealthy, false)

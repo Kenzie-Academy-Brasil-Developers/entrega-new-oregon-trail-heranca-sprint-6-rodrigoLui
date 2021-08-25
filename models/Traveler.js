@@ -1,4 +1,5 @@
 class Traveler {
+    
     constructor (name, isHealthy, food) {
         this.name = name
         this.isHealthy = isHealthy

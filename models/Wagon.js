@@ -1,3 +1,5 @@
+const Traveler = require("./Traveler")
+
 class Wagon {
     constructor (capacity) {
         this.capacity = capacity
@@ -18,9 +20,17 @@ class Wagon {
     shouldQuarantine () {
         // se tiver um viajante doente return true
         for (let i = 0; i < this.passengers.length; i++) {
+
+            if (this.passengers[i].isHealthy === 'false') {
+                this.passengers[i].isHealthy = false
+            }
+            if (this.passengers[i].isHealthy === 'true') {
+                this.passengers[i].isHealthy = true
+            }
+
             if (this.passengers[i].isHealthy === false) {
                 return true
-            }
+            } 
         }
         return false
     }
@@ -30,7 +40,7 @@ class Wagon {
         let totFood = 0
         for (let i = 0; i < this.passengers.length; i++) {
                 
-            let quantFood = this.passengers[i].amountFood
+            let quantFood = Number(this.passengers[i].food)
             totFood+=quantFood
         }
         return totFood

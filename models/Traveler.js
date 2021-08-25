@@ -1,19 +1,19 @@
 class Traveler {
-    constructor (name) {
+    constructor (name, isHealthy, food) {
         this.name = name
-        this.amountFood = 1
-        this.isHealthy = true
+        this.isHealthy = isHealthy
+        this.food = food
     }
 
     hunt () {
-        this.amountFood+= 2
+        this.food+= 2
     }
 
     eat () {
-        if (this.amountFood > 0) {
-            this.amountFood--
+        if (this.food > 0) {
+            this.food--
         } else {
-            this.amountFood = 0
+            this.food = 0
             this.isHealthy = false
         }
     }

@@ -1,13 +1,13 @@
 const Traveler  = require("./Traveler");
 
-
 class Hunter extends Traveler {
 
-    constructor (name) {
+    constructor (name, isHealthy, amountFood) {
         super(name)
-        this.amountFood = 2
-        this.isHealthy = true
+        this.isHealthy = isHealthy
+        this.amountFood = amountFood
     }
+
     hunt () {
         this.amountFood+= 5
     }
@@ -20,4 +20,13 @@ class Hunter extends Traveler {
             this.isHealthy = false
         }
     }
+    giveFood(traveler, numOfFoodUnits){
+            
+    }
 }
+
+module.exports = Hunter;
+
+const eu = new Traveler('Rodrigo', true, 0)
+const euCacador = new Hunter('Rugal', 5, true)
+console.log(euCacador.giveFood(eu))
